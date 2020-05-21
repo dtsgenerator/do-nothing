@@ -1,10 +1,14 @@
 import { PreProcessHandler, Plugin, PluginContext, Schema } from 'dtsgenerator';
 import ts from 'typescript';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageJson = require('./package.json');
+
 const doNothing: Plugin = {
     meta: {
-        name: 'do nothing',
-        description: 'this plugin do nothing.',
+        name: packageJson.name,
+        version: packageJson.version,
+        description: packageJson.description,
     },
     preProcess,
     postProcess,

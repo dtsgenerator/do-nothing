@@ -11,7 +11,7 @@ npm install @dtsgenerator/do-nothing
 
 # Usage
 
-`.dtsgenrc.json`
+`dtsgen.json`
 ```json
 {
     "plugins": {
