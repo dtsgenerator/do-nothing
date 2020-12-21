@@ -137,8 +137,8 @@ describe('PostProcess Snapshot testing', () => {
                     encoding: 'utf-8',
                 });
                 assert.deepStrictEqual(
-                   splitStringByNewLine(actual),
-                   splitStringByNewLine(expected),
+                    splitStringByNewLine(actual),
+                    splitStringByNewLine(expected),
                     `
 ${fixtureDir}
 ${actual}
