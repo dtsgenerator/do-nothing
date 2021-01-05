@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { ts, PluginContext } from 'dtsgenerator';
+import { ts, PluginContext, parseSchema, JsonSchema } from 'dtsgenerator';
 import plugin from '..';
 
 import assert = require('assert');
@@ -34,7 +34,7 @@ describe('PreProcess Snapshot testing', () => {
                 const inputContent = fs.readFileSync(inputFilePath, {
                     encoding: 'utf-8',
                 });
-                const input = JSON.parse(inputContent);
+                const input = (JSON.parse(inputContent) as JsonSchema[]).map(c => parseSchema(c));
                 const option = fs.existsSync(configFilePath)
                     ? require(configFilePath)
                     : {};
