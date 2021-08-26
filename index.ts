@@ -1,7 +1,12 @@
 import { ts, PreProcessHandler, Plugin, PluginContext, Schema } from 'dtsgenerator';
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+const packageJson: {
+    name: string;
+    version: string;
+    description: string;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const packageJson = require('./package.json');
+} = require('./package.json');
 
 const doNothing: Plugin = {
     meta: {
@@ -13,6 +18,7 @@ const doNothing: Plugin = {
     postProcess,
 };
 
+// eslint-disable-next-line @typescript-eslint/require-await
 async function preProcess(
     _pluginContext: PluginContext
 ): Promise<PreProcessHandler | undefined> {
@@ -21,6 +27,7 @@ async function preProcess(
     };
 }
 
+// eslint-disable-next-line @typescript-eslint/require-await
 async function postProcess(
     _pluginContext: PluginContext
 ): Promise<ts.TransformerFactory<ts.SourceFile> | undefined> {
