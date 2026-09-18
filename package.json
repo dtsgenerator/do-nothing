@@ -1,6 +1,6 @@
 {
   "name": "@dtsgenerator/do-nothing",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "do nothing plugin",
   "main": "index.js",
   "engines": {
